@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\GLSL">
+      <UniqueIdentifier>{15c027e6-c850-4391-b020-8dfc431892ec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\test.cpp">
@@ -21,5 +24,24 @@
     <ClCompile Include="src\glad.c">
       <Filter>源文件</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\shader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\GLSL\shader.fs">
+      <Filter>源文件\GLSL</Filter>
+    </None>
+    <None Include="src\GLSL\shader.vs">
+      <Filter>源文件\GLSL</Filter>
+    </None>
+    <None Include="src\GLSL\gradient.fs">
+      <Filter>源文件\GLSL</Filter>
+    </None>
+    <None Include="src\GLSL\gradient.vs">
+      <Filter>源文件\GLSL</Filter>
+    </None>
   </ItemGroup>
 </Project>
