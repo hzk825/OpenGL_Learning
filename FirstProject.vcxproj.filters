@@ -24,9 +24,15 @@
     <ClCompile Include="src\glad.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\new.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\shader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stb_image.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -47,6 +53,12 @@
       <Filter>源文件\GLSL</Filter>
     </None>
     <None Include="src\GLSL\discolor.vs">
+      <Filter>源文件\GLSL</Filter>
+    </None>
+    <None Include="src\GLSL\texture.vs">
+      <Filter>源文件\GLSL</Filter>
+    </None>
+    <None Include="src\GLSL\texture.fs">
       <Filter>源文件\GLSL</Filter>
     </None>
   </ItemGroup>

@@ -131,10 +131,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\glad.c" />
+    <ClCompile Include="src\new.cpp" />
     <ClCompile Include="src\test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\shader.h" />
+    <ClInclude Include="src\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\GLSL\discolor.fs" />
@@ -143,6 +145,8 @@
     <None Include="src\GLSL\gradient.vs" />
     <None Include="src\GLSL\shader.fs" />
     <None Include="src\GLSL\shader.vs" />
+    <None Include="src\GLSL\texture.fs" />
+    <None Include="src\GLSL\texture.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
