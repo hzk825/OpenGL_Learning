@@ -137,6 +137,8 @@
     <ClInclude Include="src\shader.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="src\GLSL\discolor.fs" />
+    <None Include="src\GLSL\discolor.vs" />
     <None Include="src\GLSL\gradient.fs" />
     <None Include="src\GLSL\gradient.vs" />
     <None Include="src\GLSL\shader.fs" />

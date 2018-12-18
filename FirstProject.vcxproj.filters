@@ -43,5 +43,11 @@
     <None Include="src\GLSL\gradient.vs">
       <Filter>源文件\GLSL</Filter>
     </None>
+    <None Include="src\GLSL\discolor.fs">
+      <Filter>源文件\GLSL</Filter>
+    </None>
+    <None Include="src\GLSL\discolor.vs">
+      <Filter>源文件\GLSL</Filter>
+    </None>
   </ItemGroup>
 </Project>

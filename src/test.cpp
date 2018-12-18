@@ -2,6 +2,7 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <shader.h>
+#include <cmath>
 
 void framebuffer_size_callback(GLFWwindow* window, int widthm, int height);
 void processInput(GLFWwindow* window);
@@ -25,6 +26,12 @@ const float gradVertices[] = {
 	 0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,   // 右下
 	-0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,   // 左下
 	 0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f    // 顶部
+};
+
+const float Vertices[] = {
+	 0.5f, -0.5f, 0.0f,
+	-0.5f, -0.5f, 0.0f,
+	 0.0f,  0.5f, 0.0f
 };
 
 int main() {
@@ -52,8 +59,7 @@ int main() {
 	}
 
 
-	Shader mShader(".\\src\\GLSL\\gradient.vs", ".\\src\\GLSL\\gradient.fs");
-
+	Shader mShader(".\\src\\GLSL\\shader.vs", ".\\src\\GLSL\\shader.fs");
 
 	unsigned int VBO, VAO;
 	glGenBuffers(1, &VBO);
@@ -61,14 +67,11 @@ int main() {
 
 	glBindVertexArray(VAO);//bind
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(gradVertices), gradVertices, GL_STATIC_DRAW);
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(Vertices), Vertices, GL_STATIC_DRAW);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
-	glEnableVertexAttribArray(1);
-
-
-
+	
+	
 	//渲染循环
 	while (!glfwWindowShouldClose(window)) {
 		processInput(window);
