@@ -72,13 +72,22 @@ public:
 	{
 		glUniform2f(glGetUniformLocation(ID, name.c_str()), x, y);
 	}
+	void setMat2(const std::string &name, glm::mat2 mat2) {
+		glUniformMatrix2fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(mat2));
+	}
 	void setVec3(const std::string &name, float x, float y, float z) const
 	{
 		glUniform3f(glGetUniformLocation(ID, name.c_str()), x, y, z);
 	}
+	void setMat3(const std::string &name, glm::mat3 mat3) {
+		glUniformMatrix3fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(mat3));
+	}
 	void setVec4(const std::string &name, float x, float y, float z, float w)
 	{
 		glUniform4f(glGetUniformLocation(ID, name.c_str()), x, y, z, w);
+	}
+	void setMat4(const std::string &name, glm::mat4 mat4) {
+		glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(mat4));
 	}
 private:
 	void checkStatus(GLuint shader, std::string type) {
