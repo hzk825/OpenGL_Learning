@@ -18,13 +18,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\test.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="src\glad.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\new.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\3d_test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -59,6 +59,12 @@
       <Filter>源文件\GLSL</Filter>
     </None>
     <None Include="src\GLSL\texture.fs">
+      <Filter>源文件\GLSL</Filter>
+    </None>
+    <None Include="src\GLSL\3d.vs">
+      <Filter>源文件\GLSL</Filter>
+    </None>
+    <None Include="src\GLSL\3d.fs">
       <Filter>源文件\GLSL</Filter>
     </None>
   </ItemGroup>

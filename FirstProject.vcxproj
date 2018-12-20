@@ -130,15 +130,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\3d_test.cpp" />
     <ClCompile Include="src\glad.c" />
     <ClCompile Include="src\new.cpp" />
-    <ClCompile Include="src\test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\shader.h" />
     <ClInclude Include="src\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="src\GLSL\3d.fs" />
+    <None Include="src\GLSL\3d.vs" />
     <None Include="src\GLSL\discolor.fs" />
     <None Include="src\GLSL\discolor.vs" />
     <None Include="src\GLSL\gradient.fs" />

@@ -41,7 +41,7 @@ const int indices[] = {
 	0, 1, 2,
 	2, 3, 0
 };
-int main() {
+int notmain() {
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
