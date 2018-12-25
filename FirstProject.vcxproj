@@ -130,8 +130,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\3d_test.cpp" />
     <ClCompile Include="src\glad.c" />
+    <ClCompile Include="src\light_test.cpp" />
     <ClCompile Include="src\new.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +146,10 @@
     <None Include="src\GLSL\discolor.vs" />
     <None Include="src\GLSL\gradient.fs" />
     <None Include="src\GLSL\gradient.vs" />
+    <None Include="src\GLSL\lamp.fs" />
+    <None Include="src\GLSL\lamp.vs" />
+    <None Include="src\GLSL\light.fs" />
+    <None Include="src\GLSL\light.vs" />
     <None Include="src\GLSL\shader.fs" />
     <None Include="src\GLSL\shader.vs" />
     <None Include="src\GLSL\texture.fs" />

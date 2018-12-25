@@ -24,7 +24,7 @@
     <ClCompile Include="src\new.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\3d_test.cpp">
+    <ClCompile Include="src\light_test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -68,6 +68,18 @@
       <Filter>源文件\GLSL</Filter>
     </None>
     <None Include="src\GLSL\3d.fs">
+      <Filter>源文件\GLSL</Filter>
+    </None>
+    <None Include="src\GLSL\light.fs">
+      <Filter>源文件\GLSL</Filter>
+    </None>
+    <None Include="src\GLSL\lamp.fs">
+      <Filter>源文件\GLSL</Filter>
+    </None>
+    <None Include="src\GLSL\lamp.vs">
+      <Filter>源文件\GLSL</Filter>
+    </None>
+    <None Include="src\GLSL\light.vs">
       <Filter>源文件\GLSL</Filter>
     </None>
   </ItemGroup>

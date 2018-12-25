@@ -12,7 +12,7 @@ class Shader {
 public:
 	unsigned int ID;
 
-	Shader(const GLchar * vertexPath, const GLchar* fragmentPath) {
+	Shader(const GLchar* vertexPath, const GLchar* fragmentPath) {
 		std::string vertexCode, fragmentCode;
 		std::ifstream vShaderFile, fShaderFile;
 		vShaderFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
@@ -68,25 +68,31 @@ public:
 	void setFloat(const std::string &name, float value) const {
 		glUniform1f(glGetUniformLocation(ID, name.c_str()), value);
 	}
-	void setVec2(const std::string &name, float x, float y) const
-	{
+	void setVec2(const std::string &name, float x, float y) const {
 		glUniform2f(glGetUniformLocation(ID, name.c_str()), x, y);
 	}
-	void setMat2(const std::string &name, glm::mat2 mat2) {
+	void setVec2(const std::string &name, glm::vec2 vec2) const {
+		glUniform2f(glGetUniformLocation(ID, name.c_str()), vec2.x, vec2.y);
+	}
+	void setMat2(const std::string &name, glm::mat2 mat2) const {
 		glUniformMatrix2fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(mat2));
 	}
-	void setVec3(const std::string &name, float x, float y, float z) const
-	{
+	void setVec3(const std::string &name, float x, float y, float z) const {
 		glUniform3f(glGetUniformLocation(ID, name.c_str()), x, y, z);
 	}
-	void setMat3(const std::string &name, glm::mat3 mat3) {
+	void setVec3(const std::string &name, glm::vec3 vec3) const {
+		glUniform3f(glGetUniformLocation(ID, name.c_str()), vec3.x, vec3.y, vec3.z);
+	}
+	void setMat3(const std::string &name, glm::mat3 mat3) const {
 		glUniformMatrix3fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(mat3));
 	}
-	void setVec4(const std::string &name, float x, float y, float z, float w)
-	{
+	void setVec4(const std::string &name, float x, float y, float z, float w) const {
 		glUniform4f(glGetUniformLocation(ID, name.c_str()), x, y, z, w);
 	}
-	void setMat4(const std::string &name, glm::mat4 mat4) {
+	void setVec4(const std::string &name, glm::vec4 vec4) const {
+		glUniform4f(glGetUniformLocation(ID, name.c_str()), vec4.x, vec4.y, vec4.z, vec4.w);
+	}
+	void setMat4(const std::string &name, glm::mat4 mat4) const {
 		glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(mat4));
 	}
 private:
